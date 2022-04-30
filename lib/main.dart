@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_admin/layout.dart';
 import 'package:flutter_web_admin/pages/home_page.dart';
 
 import 'package:get/get.dart';
@@ -22,8 +23,13 @@ class MyApp extends StatelessWidget {
           Theme.of(context).textTheme,
         ).apply(bodyColor: Colors.black),
         primarySwatch: Colors.blue,
+        pageTransitionsTheme: const PageTransitionsTheme(builders: {
+          TargetPlatform.iOS: FadeUpwardsPageTransitionsBuilder(),
+          TargetPlatform.android: FadeUpwardsPageTransitionsBuilder()
+        }),
+        primaryColor: Colors.blue,
       ),
-      home: const HomePage(),
+      home: SiteLayout(),
     );
   }
 }
