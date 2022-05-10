@@ -12,15 +12,11 @@ AppBar topNavBar(BuildContext context, GlobalKey<ScaffoldState> key) {
         ? Row(
             children: [
               Padding(
-                padding: EdgeInsets.only(left: 14),
-                child: Icon(
-                  Icons.ac_unit,
-                  color: dark,
+                padding: const EdgeInsets.only(left: 14),
+                child: Image.asset(
+                  "assets/icons/logo.png",
+                  width: 28,
                 ),
-                // Image.asset(
-                //   "assets/icons/logo.png",
-                //   width: 28,
-                // ),
               )
             ],
           )
@@ -63,7 +59,7 @@ AppBar topNavBar(BuildContext context, GlobalKey<ScaffoldState> key) {
               child: Container(
                 width: 12,
                 height: 12,
-                padding: EdgeInsets.all(4),
+                padding: const EdgeInsets.all(4),
                 decoration: BoxDecoration(
                     color: active,
                     borderRadius: BorderRadius.circular(30),
@@ -84,7 +80,7 @@ AppBar topNavBar(BuildContext context, GlobalKey<ScaffoldState> key) {
           text: "Santos Enoque",
           color: lightGrey,
         ),
-        SizedBox(
+        const SizedBox(
           width: 16,
         ),
         Container(
@@ -94,8 +90,8 @@ AppBar topNavBar(BuildContext context, GlobalKey<ScaffoldState> key) {
           child: Container(
             decoration: BoxDecoration(
                 color: Colors.white, borderRadius: BorderRadius.circular(30)),
-            padding: EdgeInsets.all(2),
-            margin: EdgeInsets.all(2),
+            padding: const EdgeInsets.all(2),
+            margin: const EdgeInsets.all(2),
             child: CircleAvatar(
               backgroundColor: light,
               child: Icon(
